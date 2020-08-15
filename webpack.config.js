@@ -1,4 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+var path = require("path");
+
 module.exports = {
   // Entry Point
   entry: {
@@ -8,6 +10,7 @@ module.exports = {
   // Output
   output: {
     filename: "build.js",
+    path: path.resolve(__dirname, "public"),
   },
 
   // How to resolve encountered imports
